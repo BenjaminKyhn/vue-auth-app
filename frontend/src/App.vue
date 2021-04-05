@@ -10,21 +10,16 @@
     </v-app-bar>
 
     <v-main>
-      <NewMessage/>
-      <Messages/>
+      <router-view/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-  import Messages from "./components/Messages";
-  import NewMessage from "./components/NewMessage";
 
 export default {
   name: 'App',
   components: {
-    Messages,
-    NewMessage
   },
 
   data: () => ({
