@@ -1,10 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
 const port = 3000;
+app.use(cors());
 
-app.get('/', (req, res) => {
-    const messages = ["Hello", "Hi", "Derp"];
+app.get('/messages', (req, res) => {
+    const messages = ["one", "two", "three"];
 
     res.send(messages);
 });
