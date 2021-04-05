@@ -8,6 +8,7 @@
       <v-spacer/>
       <v-btn depressed to="/Register" v-if="!$store.state.token">Register</v-btn>
       <v-btn depressed v-if="!$store.state.token">Login</v-btn>
+      <v-btn depressed v-if="$store.state.token" @click="$store.commit('logOut')">Log out</v-btn>
 
     </v-app-bar>
 
