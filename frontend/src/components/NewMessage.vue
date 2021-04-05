@@ -26,6 +26,8 @@
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         data() {
             return {
@@ -34,7 +36,7 @@
         },
         methods: {
             submit() {
-                console.log(this.messageBody)
+                axios.post("http://localhost:3000/messages", {message: this.messageBody})
             }
         }
     }
