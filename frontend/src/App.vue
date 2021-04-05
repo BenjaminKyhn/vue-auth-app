@@ -2,9 +2,10 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
-      dark
     >
+      <v-btn depressed>Messages</v-btn>
+      <v-spacer/>
+      <btn depressed>Login</btn>
 
     </v-app-bar>
 
