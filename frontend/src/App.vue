@@ -6,6 +6,7 @@
       <v-btn depressed to="/">Messages</v-btn>
       <v-btn depressed to="/NewMessage">New Message</v-btn>
       <v-spacer/>
+      <v-btn depressed to="/Register">Register</v-btn>
       <v-btn depressed>Login</v-btn>
 
     </v-app-bar>

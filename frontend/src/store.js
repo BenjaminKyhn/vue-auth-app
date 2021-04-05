@@ -28,6 +28,10 @@ export default new Vuex.Store({
         // eslint-disable-next-line no-unused-vars
         async getMessage({commit}, id){
             return axios.get(`http://localhost:3000/messages/${id}`)
+        },
+        // eslint-disable-next-line no-unused-vars
+        async register({commit}, registerData){
+            await axios.post('htto://localhost:3000/register', registerData)
         }
     }
 })
