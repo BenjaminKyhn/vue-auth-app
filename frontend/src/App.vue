@@ -3,9 +3,10 @@
     <v-app-bar
       app
     >
-      <v-btn depressed>Messages</v-btn>
+      <v-btn depressed to="/">Messages</v-btn>
+      <v-btn depressed to="/NewMessage">New Message</v-btn>
       <v-spacer/>
-      <btn depressed>Login</btn>
+      <v-btn depressed>Login</v-btn>
 
     </v-app-bar>
 
