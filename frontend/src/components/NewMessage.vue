@@ -12,13 +12,14 @@
                                 md="4"
                         >
                             <v-text-field
+                                    v-model="messageBody"
                                     label="Message"
                                     required
                             ></v-text-field>
                         </v-col>
                     </v-row>
                 </v-container>
-                <v-btn>submit</v-btn>
+                <v-btn @click="submit">submit</v-btn>
             </v-form>
         </v-card>
     </v-flex>
@@ -26,7 +27,16 @@
 
 <script>
     export default {
-        name: "NewMessage"
+        data() {
+            return {
+                messageBody: ""
+            }
+        },
+        methods: {
+            submit() {
+                console.log(this.messageBody)
+            }
+        }
     }
 </script>
 
