@@ -1,6 +1,6 @@
 <template>
-    <v-flex sm8 offset-sm2>
-        <v-card class="mt-10 mb-10">
+    <v-flex sm8 offset-sm2 class="mt-10">
+        <v-card>
             <v-toolbar dark>
                 New Message
             </v-toolbar>

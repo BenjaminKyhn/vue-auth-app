@@ -6,9 +6,9 @@
             </v-toolbar>
             <div class="pa-5">
                 <v-list>
-                    <v-list-tile v-for="(message, i) in $store.state.messages" :key="i">
+                    <v-list-tile v-for="(message, index) in $store.state.messages" :key="index">
                         <v-list-tile-content>
-                            <v-list-item v-text="message"></v-list-item>
+                            <v-list-item v-text="message" :to="'messages/' + index"></v-list-item>
                         </v-list-tile-content>
                     </v-list-tile>
                 </v-list>

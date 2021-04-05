@@ -24,6 +24,10 @@ export default new Vuex.Store({
         async newMessage({commit}, messageBody){
             let msg = (await axios.post("http://localhost:3000/messages", {message: messageBody})).data
             commit('newMessage', msg.message)
+        },
+        // eslint-disable-next-line no-unused-vars
+        async getMessage({commit}, id){
+            return axios.get(`http://localhost:3000/messages/${id}`)
         }
     }
 })
