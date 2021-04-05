@@ -31,7 +31,10 @@ export default new Vuex.Store({
         },
         // eslint-disable-next-line no-unused-vars
         async register({commit}, registerData){
-            await axios.post('htto://localhost:3000/register', registerData)
+            let user = (await axios.post("http://localhost:3000/register", registerData)).data;
+            console.log(user)
+            localStorage.setItem("token", user.id)
+            axios.defaults.headers.common['Authorization'] = user.id;
         }
     }
 })

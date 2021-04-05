@@ -2,7 +2,7 @@
     <v-flex sm8 offset-sm2 class="mt-10">
         <v-card>
             <v-toolbar dark>Message</v-toolbar>
-            <v-card-text>{{messageBody}}</v-card-text>
+            <v-card-text>{{message.text}}</v-card-text>
         </v-card>
     </v-flex>
 </template>
@@ -11,11 +11,11 @@
     export default {
         data(){
             return {
-                messageBody: ""
+                message: ""
             }
         },
         async created(){
-            this.messageBody = (await this.$store.dispatch('getMessage', this.$route.params.id)).data
+            this.message = (await this.$store.dispatch('getMessage', this.$route.params.id)).data
         }
     }
 

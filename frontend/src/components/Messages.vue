@@ -7,9 +7,12 @@
             <div class="pa-5">
                 <v-list>
                     <v-list-tile v-for="(message, index) in $store.state.messages" :key="index">
-                        <v-list-tile-content>
-                            <v-list-item v-text="message" :to="'messages/' + index"></v-list-item>
-                        </v-list-tile-content>
+                        <div class="messageGroup">
+                            <v-list-tile-content>
+                                <v-list-item-title v-text="message.text" :to="'messages/' + index"></v-list-item-title>
+                                <v-list-item-subtitle v-text="message.user"></v-list-item-subtitle>
+                            </v-list-tile-content>
+                        </div>
                     </v-list-tile>
                 </v-list>
             </div>
@@ -26,5 +29,7 @@
 </script>
 
 <style scoped>
-
+    .messageGroup {
+        margin-bottom: 20px;
+    }
 </style>
