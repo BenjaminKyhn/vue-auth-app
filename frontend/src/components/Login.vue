@@ -2,7 +2,7 @@
     <v-flex sm8 offset-sm2 class="mt-10">
         <v-card>
             <v-toolbar dark>
-                Register
+                Login
             </v-toolbar>
             <v-form class="pa-5">
                 <v-container>
@@ -31,7 +31,7 @@
                         </v-col>
                     </v-row>
                 </v-container>
-                <v-btn @click="register">register</v-btn>
+                <v-btn @click="login">login</v-btn>
             </v-form>
         </v-card>
     </v-flex>
@@ -39,15 +39,9 @@
 
 <script>
     export default {
-        data(){
-            return {
-                username: "",
-                password: ""
-            }
-        },
         methods: {
-            async register() {
-                this.$store.dispatch('register', {username: this.username, password: this.password})
+            async login() {
+                this.$store.dispatch('login', {username: this.username, password: this.password})
             }
         }
     }
